@@ -19,36 +19,37 @@ def main():
 
         
 
-    print("Welcome to the Anxious Person Wal-Mert Shopping Simulator\n")
+    print("\nWelcome to the Anxious Person Wal-Mert Shopping Simulator\n")
     #time.sleep(3)
-    print("Answer Y for Yes or N for No for each scenario.\n")
+    print("\nAnswer Y for Yes or N for No for each scenario.\n")
     #time.sleep(1)
-    print("You see a van with reverse lights on close to the main entrance.\n")
+    print("\nYou see a van with reverse lights on close to the main entrance.\n")
     #time.sleep(1)
 
     check1 = input("Do you pull up close and wait for them to leave?: ")
     
     if str.lower(check1) == "y":
-        print("The person sits there for a solid 30 seconds without moving\n")
+        print("\nThe person sits there for a solid 30 seconds without moving\n")
         time.sleep(1.5)
-        print("---Your anxiety level escalates slightly...\n")
+        print("\n---Your anxiety level escalates slightly...\n")
         anxiety = anxiety + 1
     elif str(check1) == "n":
-        print("You decide not to wait and move on to a further spot.\n")
+        print("\nYou decide not to wait and move on to a further spot.\n")
 
     #time.sleep(1)
-    print("You park your car and head into the store, somebody is blocking the entrance with\na cart and they're on their phone looking the other way.\n")
+    print("\nYou park your car and head into the store.\nSomebody is blocking the entrance with\na cart and they're on their phone looking the other way.\n")
     #time.sleep(3)
-    check2 = input("You have 3 choices: \n 1. Squeeze between the cart and door and ignore them. \n 2. Stand there until they realise they're blocking the way. \n 3. Say EXCUSE ME YOU'RE BLOCKING THE DOOR\n Choose 1, 2, or 3:\n ")
+    check2 = input("\nYou have 3 choices: \n 1. Squeeze between the cart and door and ignore them. \n 2. Stand there until they realise they're blocking the way. \n 3. Say EXCUSE ME YOU'RE BLOCKING THE DOOR\n Choose 1, 2, or 3:\n ")
     if check2 == str(1):
-        print("They didn't even notice you and now there's a black stain from the cart on your pants\n---Your anxiety increases mildly and you're already regretting this trip.\n")
+        print("\nThey didn't even notice you and now there's a black stain from the cart on your pants\n---Your anxiety increases mildly and you're already regretting this trip.\n")
         anxiety = anxiety + 2
     elif check2 == str(2):
-        print("After a solid 15 seconds they see you in the corner of their eye and move\nthe cart about a foot out of the way, not bothered at all \n\n---Your patience dwindles slightly.\n")
+        print("\nAfter a solid 15 seconds they see you in the corner of their eye and move\nthe cart about a foot out of the way, not bothered at all \n\n---Your patience dwindles slightly.\n")
         patience = patience - 1
     elif check2 == str(3):
-        print("The person is visibly shocked and drops their phone, the gap opens and they don't realise what\nhappened until you're already well into the store.\n")
-#level check
+        print("\nThe person is visibly shocked and drops their phone, the gap opens and they don't realise what\nhappened until you're already well into the store.\n")
+
+    #level check
     if anxiety >= 5:
         print(anxietyScenario)
     elif patience == 0:
@@ -56,24 +57,24 @@ def main():
     elif health == 0:
         print(healthScenario)
 
-    print("You make your way towards your first item.\n")
+    print("\nYou make your way towards your first item.\n")
     check3 = input("You get close to the aisle you need to go down\nbut someone is currently blocking it with\ntheir entire family and doesn't look to be moving soon.\nYou can either cut through the next aisle with the arrows\nfacing the wrong way or go all the way around.\nDo you cut through? ")
     if str.lower(check3) == "y":
-        print("As you cut through the aisle, a rather large woman looks at you.\nShe proceeds to turn her cart and gaze towards\n the chocolate bars and shows no sign of moving.")
+        print("\nAs you cut through the aisle, a rather large woman looks at you.\nShe proceeds to turn her cart and gaze towards\nthe chocolate bars and shows no sign of moving.")
         time.sleep(2)
-        print("You can say Excuse me I just need to get by OR \ngo full tilt and throw your shoulder into her in an attempt to penetrate the wall of self rightousness")
-        check3a = input("Choose 1 or 2: ")
-        if str(check3a) == 1:
-            print("Your Excuse Me wasn't very effective.\nYou attempt to squeeze past and as you are about to pass in front of her\n she sneezes aggressively. You sprint out of the aisle.\n")
+        print("\nYou can say Excuse me I just need to get by OR \ngo full tilt and throw your shoulder into her in an attempt to penetrate the wall of self rightousness")
+        check3a = input("\nChoose 1 or 2: ")
+        if check3a == str(1):
+            print("\nYour Excuse Me wasn't very effective.\nYou attempt to squeeze past and as you are about to pass in front of her\n she sneezes aggressively. You sprint out of the aisle.\n")
             anxiety = anxiety + 1
             patience = patience - 2
             health = health - 3
-            print("---Your health, anxiety and patience just took a severe hit.")
-        elif str(check3a) == 2:
-            print("You throw all of your weight into a head down shoulder tackle just as\nshe moves to grab a Bag of Halloween Candy and you go bouncing off the opposing aisle.\nYou make it through but not cleanly.")
+            print("\n---Your health, anxiety and patience just took a severe hit.")
+        elif check3a == str(2):
+            print("\nYou throw all of your weight into a head down shoulder tackle just as\nshe moves to grab a Bag of Halloween Candy and you go bouncing off the opposing aisle.\nYou make it through but not cleanly.")
             patience = patience - 1
             health = health - 2
-    else: print("You take the long way around, through some coughing NPCs\nand some tempting impulse buys you arrive at your first item.")
+    else: print("\nYou take the long way around, through some coughing NPCs\nand some tempting impulse buys you arrive at your first item.")
     health = health - 1
 
     #level check
@@ -84,8 +85,23 @@ def main():
     elif health == 0:
         print(healthScenario)
     
-    print("Your next item is just across the main racetrack. There are\n 3 other people in this aisle in a zig-zag pattern all with carts.")
-    check4 = input("You can get the item quicker by leaving your cart where it is,\nyou'll be quick afterall. Do you leave your cart?: ")
+    print("\nYour next item is just across the main racetrack. There are\n 3 other people in this aisle in a zig-zag pattern all with carts.")
+    check4 = input("\nYou can get the item quicker by leaving your cart where it is,\nyou'll be quick afterall. Do you leave your cart?: ")
+    if str.lower(check4) == "y":
+        print("\nYou make your way through the obstacle of old ladies complaining\n they've never seen bacon so expensive.\nAs you're coming to the end of the aisle you don't look both ways and get bumped\n by a small child. He looks at you and then runs away.\nYou look down and see a wet spot where his face collided with your leg.\n You sigh, grab your item and make your way back to your cart.")
+        health = health - 1
+    else: print("\nYou take your cart and take the long way around again.\n On your way you hit up a hand sanitizer station. You feel less gross.")
+    health = health + 1
+
+    #level check
+    if anxiety >= 5:
+        print(anxietyScenario)
+    elif patience == 0:
+        print(patienceScenario)
+    elif health == 0:
+        print(healthScenario)
+
+        
 
 
         
