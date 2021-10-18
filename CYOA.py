@@ -3,7 +3,7 @@
 #Scenario Wal-Mert
 
 import time
-
+import sys
 def main():
 #if anxiety reaches 5, you lose
 #if patience reaches 0, you lose
@@ -53,10 +53,16 @@ def main():
     #level check
     if anxiety >= 5:
         print(anxietyScenario)
+        time.sleep(10)
+        sys.exit()
     elif patience == 0:
         print(patienceScenario)
+        time.sleep(10)
+        sys.exit()
     elif health == 0:
         print(healthScenario)
+        time.sleep(10)
+        sys.exit()
     
     #time.sleep(1)
     print("\nYou make your way towards your first item.\n")
@@ -78,18 +84,25 @@ def main():
             patience = patience - 1
             health = health - 2
             print("\n---Your patience is wearing thin and you suddenly feel off...\n")
-    else: print("\nYou take the long way around, through some coughing NPCs\nand some tempting impulse buys you arrive at your first item.")
-    health = health - 1
+        elif check3a == str(3): 
+            print("\nYou take the long way around,    through some coughing NPCs\nand some tempting impulse buys you arrive at your first item.")
+            health = health - 1
 
-    time.sleep(1)
+    time.sleep(2)
 
     #level check
     if anxiety >= 5:
         print(anxietyScenario)
+        time.sleep(10)
+        sys.exit()
     elif patience == 0:
         print(patienceScenario)
+        time.sleep(10)
+        sys.exit()
     elif health == 0:
         print(healthScenario)
+        time.sleep(10)
+        sys.exit()
     
     print("\nYour next item is just across the main racetrack. There are\n 3 other people in this aisle in a zig-zag pattern all with carts.")
     check4 = input("\nYou can get the item quicker by leaving your cart where it is,\nyou'll be quick afterall. Do you leave your cart?: ")
@@ -97,18 +110,24 @@ def main():
     if str.lower(check4) == "y":
         print("\nYou make your way through the obstacle of old ladies complaining they've never seen bacon so expensive.\nAs you're coming to the end of the aisle you don't look both ways and get bumped by a small child.\nHe looks at you and then runs away.\nYou look down and see a wet spot where his face collided with your leg.\n You sigh, grab your item and make your way back to your cart.")
         health = health - 1
-    else: print("\nYou take your cart and take the long way around again.\n On your way you hit up a hand sanitizer station. You feel less gross.")
+    else: print("\nYou take your cart and take the long way around again.\n On your way you hit up a hand sanitizer station.\n---You feel less gross.")
     health = health + 1
 
     #level check
     if anxiety >= 5:
         print(anxietyScenario)
+        time.sleep(10)
+        sys.exit()
     elif patience == 0:
         print(patienceScenario)
+        time.sleep(10)
+        sys.exit()
     elif health == 0:
         print(healthScenario)
+        time.sleep(10)
+        sys.exit()
 
-        
+    
 
 
         
