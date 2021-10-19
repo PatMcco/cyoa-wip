@@ -303,6 +303,39 @@ def main():
         elif str.lower(check7a) == "n":
             print("Probably smart to keep your mouth shut.\n\nNothing good could come from arguing in Wal-Mert.")
             time.sleep(2)
+            print("You finish the transaction and head out the door...\n\n")
+            time.sleep(2)
+            print(winScenario)
+    elif str.lower(check7) == "n":
+        time.sleep(2)
+        print("You decide to wait for the one cash register open.\n\n")
+        time.sleep(2)
+        print("The Lady behind you has her mask down below her nose.\n\n")
+        print("All of a sudden she sneezes, and you feel the back of your neck\nwas the main point of impact.\n\n")
+        health = health - 2
+        time.sleep(2)
+            #level check
+        if anxiety >= 5:
+            print(anxietyScenario)
+            time.sleep(10)
+            sys.exit()
+        elif patience == 0:
+            print(patienceScenario)
+            time.sleep(10)
+            sys.exit()
+        elif health == 0:
+            print(healthScenario)
+            time.sleep(10)
+            sys.exit()
+        print("You put your hood up incase a second barrage comes...\n\n")
+        time.sleep(2)
+        print("You get your groceries rung through, pay, and head out the door...\n\n")
+        time.sleep(2)
+        print("It was quite the trip but overall pretty normal for Wal-Mert. Maybe try BostBo next time...\n\n")
+        time.sleep(2)
+        print(winScenario)
+
+        
 
 
 
