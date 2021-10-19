@@ -20,11 +20,15 @@ def main():
 
         
 ####Introduction####
-    print("\nWelcome to the Anxious Person Wal-Mert Shopping Simulator\n")
+    print("\nWelcome to a regular trip to Wal-Mert.\n")
     time.sleep(2)
-    print("\nAnswer Y for Yes or N for No for each scenario.\n")
+    print("\nAnswer Y for Yes or N for No for each scenario unless otherwise specified.\n")
     time.sleep(2)
-    print("\nYou see a van with reverse lights on close to the main entrance.\n")
+    print("The goal is to retrieve your 5 items and get out in one piece.\n\n")
+    time.sleep(2)
+    print("You're just pulling in the parking lot now...\n\n")
+    time.sleep(2)
+    print("You see a van with reverse lights on close to the main entrance.\n")
     time.sleep(2)
 
     check1 = input("Do you pull up close and wait for them to leave?: \n\n")
