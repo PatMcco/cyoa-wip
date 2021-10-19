@@ -12,11 +12,11 @@ def main():
     patience = 5
     health = 10
 ####Scenario Endings####
-    winScenario = "Congratulations, you survived another trip to Wal-Mert\nwith your sanity intact. It could've been a lot worse. Time to go home.\n\n"
-    anxietyScenario = "You suddenly feel flush and shakey, your vision narrows and you drop everything while making your way out of the store, you tell yourself you should've stayed home. Unfortunate but some days are just not great no matter what you do."
-    patienceScenario = "You've lost your patience. \nYou kick the next cart that's remotely close to your \nimmediate path out of here and tell multiple strangers to get F***ed as you \nstorm out flipping off the old Greeter lady. Won't be showing your face here for awhile..."
-    healthScenario = "That was the last straw, you've managed to contract something\ndoctors don't have a name for and the side effects of it include\nhaving zero self-awareness, lack of compassion for other human beings\n and consistently blocking aisles or laneways whilst going into a sort of comatose state. RIP"
-    karenScenario = "You feel your hair change shape. Suddenly everybody looks like they're a criminal who wants to hurt you. You can only ask for a manager, complain and threaten to call the police. You've become a Karen. Sad."
+    winScenario = "Congratulations, you survived another trip to Wal-Mert\nwith your sanity intact. It could've been a lot worse. Time to go home...\n\n"
+    anxietyScenario = "You suddenly feel flush and shakey, your vision narrows and you drop everything while making your way out of the store.\nYou tell yourself you should've stayed home\n Unfortunate but some days are just not great no matter what you do. \n\nAnxiety wins again."
+    patienceScenario = "You've lost your patience. \nYou kick the next cart that's remotely close to your immediate path out of here.\nYou tell multiple strangers to get F***ed as you storm out.\nFlipping off the old Greeter lady as you do.\n\nWon't be showing your face here for awhile..."
+    healthScenario = "That was the last straw, you've managed to contract something doctors don't have a name for.\nThe side effects of it include:\nHaving zero self-awareness\nlack of compassion for other human beings\nConsistently blocking aisles or laneways whilst going into a sort of comatose state.\n\nWal-Mert claims another...."
+    karenScenario = "You feel your hair change shape. Suddenly everybody looks like they're a criminal who wants to hurt you.\nYou can only ask for a manager, complain, and threaten to call the police.\n\nYou've become a Karen. Sad..."
 
         
 ####Introduction####
@@ -39,7 +39,11 @@ def main():
         time.sleep(2)
 
     time.sleep(2)
-    print("\nYou park your car and head into the store.\nSomebody is blocking the entrance with\na cart and they're on their phone looking the other way.\n")
+    print("\nYou park your car and head into the store.\n\n")
+    time.sleep(2)
+    print("Somebody is blocking the entrance witha cart.\n\n")
+    time.sleep(2)
+    print("They're on their phone looking the other way.\n")
     time.sleep(2)
     check2 = input("\nYou have 3 choices: \n 1. Squeeze between the cart and door and ignore them. \n\n 2. Stand there until they realise they're blocking the way. \n\n 3. Say EXCUSE ME YOU'RE BLOCKING THE DOOR\n\n Choose 1, 2, or 3:\n ")
     if check2 == str(1):
@@ -118,10 +122,11 @@ def main():
 ####PArt 2 Item 2####
     time.sleep(3)
     print("\nYour next item is just across the main racetrack. There are\n 3 other people in this aisle in a zig-zag pattern all with carts.\n")
+    time.sleep(2)
     check4 = input("\nYou can get the item quicker by leaving your cart where it is,\nyou'll be quick afterall. Do you leave your cart?: \n")
     time.sleep(2)
     if str.lower(check4) == "y":
-        time.sleep(2)
+        time.sleep(1)
         print("\nYou make your way through the obstacle of old ladies complaining they've never seen bacon so expensive.\nAs you're coming to the end of the aisle you don't look both ways and get bumped by a small child.\nHe looks at you and then runs away.\nYou look down and see a wet spot where his face collided with your leg.\n You sigh, grab your item and make your way back to your cart.\n")
         health = health - 1
     else:
@@ -144,6 +149,7 @@ def main():
         sys.exit()
 
 ###Part 3 Item 3###
+    time.sleep(3)
     print("\nYou now have 2 of 5 items. Your next closest item is in the footwear aisle.\nAs you make your way there you come across a wet floor sign.\nSeems somebody had a pretty bad accident.\n\n")
     time.sleep(2)
     print("You don't want to push your cart through the mess,\nbut going against the floor arrows is a crime punishable by public humiliation these days.\n\n")
