@@ -45,7 +45,7 @@ def main():
     time.sleep(2)
     print("\nYou park your car and head into the store.\n\n")
     time.sleep(2)
-    print("Somebody is blocking the entrance witha cart.\n\n")
+    print("Somebody is blocking the entrance with a cart.\n\n")
     time.sleep(2)
     print("They're on their phone looking the other way.\n")
     time.sleep(2)
@@ -56,9 +56,11 @@ def main():
         anxiety = anxiety + 2
     elif check2 == str(2):
         time.sleep(2)
-        print("\nAfter a solid 15 seconds they see you in the corner of their eye and move\nthe cart about a foot out of the way, not bothered at all \n\n---Your patience dwindles slightly.\n")
+        print("\nAfter a solid 15 seconds they see you in the corner of their eye and move\nthe cart about a foot out of the way, not bothered at all \n\n")
+        time.sleep(2)
+        print("---Your patience dwindles slightly.\n")
         patience = patience - 1
-    elif check2 == str(2):
+    elif check2 == str(3):
         time.sleep(2)
         print("\nThe person is visibly shocked and drops their phone, the gap opens and they don't realise what\nhappened until you're already well into the store.\n")
 
@@ -75,6 +77,7 @@ def main():
         print(healthScenario)
         time.sleep(10)
         sys.exit()
+
     ####Part 1 Item 1####
     time.sleep(2)
     print("\nYou make your way towards your first item.\n")
@@ -185,6 +188,8 @@ def main():
         print(healthScenario)
         time.sleep(10)
         sys.exit()
+
+####Part 3 Cont.####
 
     print("You arrive at the footwear section, you aren't exactly sure where the item you need is.\n\n")
     time.sleep(2)
