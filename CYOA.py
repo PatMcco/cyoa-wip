@@ -201,14 +201,14 @@ def main():
     if str.lower(check5) == "y":
         print("You find an employee who shows you to the item.\nYou thank him as you place your 3rd item in your cart.\n\n")
         time.sleep(2)
-        if check5 == False:
-            print("The smell from the previous hazard is still lingering. Gross.\n\n")
-            time.sleep(2)
+        #####if check5 == False:
+        ###    print("The smell from the previous hazard is still lingering. Gross.\n\n")
+        ###    time.sleep(2)
         health = health - 1
     elif str.lower(check5) == "n":
         print("You were too embarassed to ask for help. You look around for 20 minutes before finding your item.\n\n")
         time.sleep(2)
-        print("The smell is really getting to you and others are definately noticing. Gross\n\n")
+        ##print("The smell is really getting to you and others are definately noticing. Gross\n\n")
         health = health - 2
         anxiety = anxiety + 1
         time.sleep(2.2)
@@ -259,6 +259,7 @@ def main():
         health = health - 3
         patience = patience - 1
         time.sleep(2)
+    ####needs alternate scenario for no smell
     elif check6 == str(3):
         print("You attempt to climb the shelving...\n\n")
         time.sleep(2)
