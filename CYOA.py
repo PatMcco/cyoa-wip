@@ -10,7 +10,7 @@ def main():
 #if health reaches 0, you lose
     anxiety = 1
     patience = 5
-    health = 10
+    health = 8
 ####Scenario Endings####
     winScenario = "Congratulations, you survived another trip to Wal-Mert\nwith your sanity intact. It could've been a lot worse. Time to go home...\n\n"
     anxietyScenario = "You suddenly feel flush and shakey, your vision narrows and you drop everything while making your way out of the store.\nYou tell yourself you should've stayed home\n Unfortunate but some days are just not great no matter what you do. \n\nAnxiety wins again."
@@ -37,6 +37,7 @@ def main():
         print("\nThe person sits there for a solid 30 seconds without moving\n")
         time.sleep(2)
         print("\n---Your anxiety level escalates slightly...\n")
+        time.sleep(2)
         anxiety = anxiety + 1
     elif str(check1) == "n":
         print("\nYou decide not to wait and move on to a further spot.\n")
@@ -67,15 +68,15 @@ def main():
        ########level check#########
     if anxiety >= 5:
         print(anxietyScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif patience == 0:
         print(patienceScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif health == 0:
         print(healthScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
 
     ####Part 1 Item 1####
@@ -92,6 +93,7 @@ def main():
         print("\nAs you cut through the aisle, a rather large woman looks at you.\nShe proceeds to turn her cart and gaze towards\nthe chocolate bars and shows no sign of moving.\n")
         time.sleep(2)
         print("\nYou can say Excuse me I just need to get by OR \ngo full tilt and throw your shoulder into her in an attempt to penetrate the wall of self rightousness\n")
+        time.sleep(2)
         check3a = input("\nChoose 1 or 2: \n")
         if check3a == str(1):
             print("\nYour Excuse Me wasn't very effective.\n\nYou attempt to squeeze past and as you are about to pass in front of her she sneezes aggressively.\n\nYou sprint out of the aisle.\n")
@@ -100,6 +102,7 @@ def main():
             health = health - 3
             time.sleep(3)
             print("\n---Your health, anxiety and patience just took a severe hit.\n")
+            time.sleep(2)
         elif check3a == str(2):
             print("\nYou throw all of your weight into a head down shoulder tackle just as\nshe moves to grab a Bag of Halloween Candy and you go bouncing off the opposing aisle.\nYou make it through but not cleanly.\n")
             patience = patience - 1
@@ -115,15 +118,15 @@ def main():
        ########level check#########
     if anxiety >= 5:
         print(anxietyScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif patience == 0:
         print(patienceScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif health == 0:
         print(healthScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
 
 ####PArt 2 Item 2####
@@ -144,15 +147,15 @@ def main():
        ########level check#########
     if anxiety >= 5:
         print(anxietyScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif patience == 0:
         print(patienceScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif health == 0:
         print(healthScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
 
 ###Part 3 Item 3###
@@ -178,15 +181,15 @@ def main():
         #######level check#########
     if anxiety >= 5:
         print(anxietyScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif patience == 0:
         print(patienceScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif health == 0:
         print(healthScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
 
 ####Part 3 Cont.####
@@ -200,6 +203,7 @@ def main():
         time.sleep(2)
         if check5 == False:
             print("The smell from the previous hazard is still lingering. Gross.\n\n")
+            time.sleep(2)
         health = health - 1
     elif str.lower(check5) == "n":
         print("You were too embarassed to ask for help. You look around for 20 minutes before finding your item.\n\n")
@@ -212,15 +216,15 @@ def main():
         #######level check#########
     if anxiety >= 5:
         print(anxietyScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif patience == 0:
         print(patienceScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif health == 0:
         print(healthScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
 
 ####part 6 item 4####
@@ -263,22 +267,22 @@ def main():
         print("An employee appears out of nowhere and grabs the item for you.\nAs they help you up they say:\n'We have you on camera doing this and driving through that spill earlier.\n If you complain to corporate you'll be barred from ever coming back.'\n\n")
         time.sleep(4)
         print("Now completely embarassed you quickly lean on your cart and hobble away quietly.\n\n")
-        health=health - 1
+        health = health - 1
         anxiety = anxiety + 1
         patience = patience - 1
         
     #level check
     if anxiety >= 5:
         print(anxietyScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif patience == 0:
         print(patienceScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     elif health == 0:
         print(healthScenario)
-        time.sleep(10)
+        time.sleep(20)
         sys.exit()
     
 ####PArt 7 Item 5####
@@ -332,15 +336,15 @@ def main():
             #level check
         if anxiety >= 5:
             print(anxietyScenario)
-            time.sleep(10)
+            time.sleep(20)
             sys.exit()
         elif patience == 0:
             print(patienceScenario)
-            time.sleep(10)
+            time.sleep(20)
             sys.exit()
         elif health == 0:
             print(healthScenario)
-            time.sleep(10)
+            time.sleep(20)
             sys.exit()
         print("You put your hood up incase a second barrage comes...\n\n")
         time.sleep(2)
