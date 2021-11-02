@@ -3,7 +3,6 @@
 #Scenario Wal-Mert
 
 import time
-import sys
 def main():
 #if anxiety reaches 5, you lose
 #if patience reaches 0, you lose
@@ -11,13 +10,29 @@ def main():
     anxiety = 1
     patience = 4
     health = 8
+
+
+    def levelCheck():
+        if anxiety >= 5:
+            print(anxietyScenario)
+            time.sleep(100)
+            exit()
+        elif patience == 0:
+            print(patienceScenario)
+            time.sleep(100)
+            exit()
+        elif health == 0:
+            print(healthScenario)
+            time.sleep(100)
+            exit()
+
 ####Scenario Endings####
     winScenario = "Congratulations, you survived another trip to Wal-Mert with your sanity intact.\n\nIt could've been a lot worse. Time to go home...\n\n"
-    anxietyScenario = "You suddenly feel flush and shakey, your vision narrows and you drop everything while making your way out of the store.\nYou tell yourself you should've stayed home\n Unfortunate but some days are just not great no matter what you do. \n\nAnxiety wins again."
+    anxietyScenario = "You suddenly feel flush and shakey, your vision narrows and you drop everything while making your way out of the store.\nYou tell yourself you should've stayed home\nUnfortunate but some days are just not great no matter what you do. \n\nAnxiety wins again."
     patienceScenario = "You've lost your patience. \nYou kick the next cart that's remotely close to your immediate path out of here.\nYou tell multiple strangers to get F***ed as you storm out.\nFlipping off the old Greeter lady as you do.\n\nWon't be showing your face here for awhile..."
     healthScenario = "That was the last straw, you've managed to contract something doctors don't have a name for.\nThe side effects of it include:\nHaving zero self-awareness\nlack of compassion for other human beings\nConsistently blocking aisles or laneways whilst going into a sort of comatose state.\n\nWal-Mert claims another...."
     karenScenario = "You feel your hair change shape. Suddenly everybody looks like they're a criminal who wants to hurt you.\nYou can only ask for a manager, complain, and threaten to call the police.\n\nYou've become a Karen. Sad..."
-    boomerScenario = ("You've turned into the one thing you swore never to become as you hear a teenager laugh and say\n\n" + "KEEP IT DOWN BOOMER IT'S PAST YOUR BED TIME")
+    boomerScenario = ("You've turned into the one thing you swore never to become as you hear a teenager laugh and say\n\n" + "KEEP IT DOWN BOOMER ITS PASSED YOUR BED TIME")
 
         
 ####Introduction####
@@ -67,18 +82,7 @@ def main():
         print("\nThe person is visibly shocked and drops their phone, the gap opens and they don't realise what\nhappened until you're already well into the store.\n")
 
        ########level check#########
-    if anxiety >= 5:
-        print(anxietyScenario)
-        time.sleep(100)
-        exit()
-    elif patience == 0:
-        print(patienceScenario)
-        time.sleep(100)
-        exit()
-    elif health == 0:
-        print(healthScenario)
-        time.sleep(100)
-        exit()
+    levelCheck()
 
     ####Part 1 Item 1####
     time.sleep(2)
@@ -124,18 +128,7 @@ def main():
 
 
        ########level check#########
-    if anxiety >= 5:
-        print(anxietyScenario)
-        time.sleep(100)
-        exit()
-    elif patience == 0:
-        print(patienceScenario)
-        time.sleep(100)
-        exit()
-    elif health == 0:
-        print(healthScenario)
-        time.sleep(100)
-        exit()
+    levelCheck()
 
 ####PArt 2 Item 2####
     time.sleep(3)
@@ -165,18 +158,7 @@ def main():
         health = health + 1
 
        ########level check#########
-    if anxiety >= 5:
-        print(anxietyScenario)
-        time.sleep(100)
-        exit()
-    elif patience == 0:
-        print(patienceScenario)
-        time.sleep(100)
-        exit()
-    elif health == 0:
-        print(healthScenario)
-        time.sleep(100)
-        exit()
+    levelCheck()
 
 ###Part 3 Item 3###
     time.sleep(3)
@@ -204,18 +186,7 @@ def main():
         time.sleep(2.2)
 
         #######level check#########
-    if anxiety >= 5:
-        print(anxietyScenario)
-        time.sleep(100)
-        exit()
-    elif patience == 0:
-        print(patienceScenario)
-        time.sleep(100)
-        exit()
-    elif health == 0:
-        print(healthScenario)
-        time.sleep(100)
-        exit()
+    levelCheck()
 
 ####Part 3 Cont.####
 
@@ -243,18 +214,7 @@ def main():
         time.sleep(2)
 
         #######level check#########
-    if anxiety >= 5:
-        print(anxietyScenario)
-        time.sleep(100)
-        exit()
-    elif patience == 0:
-        print(patienceScenario)
-        time.sleep(100)
-        exit()
-    elif health == 0:
-        print(healthScenario)
-        time.sleep(100)
-        exit()
+    levelCheck()
         
 
 ####part 6 item 4####
@@ -323,17 +283,7 @@ def main():
 
         
     #level check
-    if anxiety >= 5:
-        print(anxietyScenario)
-        time.sleep(100)
-        
-    elif patience == 0:
-        print(patienceScenario)
-        time.sleep(100)
-        
-    elif health == 0:
-        print(healthScenario)
-        time.sleep(100)
+    levelCheck()
         
     
 ####PArt 7 Item 5####
@@ -398,18 +348,8 @@ def main():
         health = health - 2
         time.sleep(2)
             #level check
-        if anxiety >= 5:
-            print(anxietyScenario)
-            time.sleep(100)
-            exit()
-        elif patience == 0:
-            print(patienceScenario)
-            time.sleep(100)
-            exit()
-        elif health == 0:
-            print(healthScenario)
-            time.sleep(100)
-            exit()
+        levelCheck()
+
         print("You put your hood up incase a second barrage comes...\n\n")
         time.sleep(2)
         print("You get your groceries rung through, pay, and head out the door...\n\n")
